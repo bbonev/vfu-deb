@@ -1,3 +1,21 @@
+vfu (4.18-2) unstable; urgency=medium
+
+  * New maintainer (Closes: #847513)
+  * Update Standards-Version to 4.5.0
+  * Update compat level to 13
+  * Fix lintian executable-in-usr-lib
+    - Install all internally used helpers in /usr/libexec/vfu
+  * Reformat debian/copyright to be machine readable
+  * Fix build on Hurd
+    - use sys/vfs.h instead of sys/mount.h
+  * Add checking upstream tarball GPG signature
+  * Add lintian override for repackaged source signature check
+    - 4.18 upstream tarball contains executable and object files
+      that are excluded in the repackaged archive. The orig
+      tarball is not regenerated; the previous upload is used instead
+
+ -- Boian Bonev <bbonev@ipacct.com>  Sat, 25 Jul 2020 00:05:15 +0300
+
 vfu (4.18-1) unstable; urgency=medium
 
   * QA upload.
