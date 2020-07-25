@@ -1,0 +1,244 @@
+vfu (4.18-1) unstable; urgency=medium
+
+  * QA upload.
+  * Update to new upstream release of 4.18.
+    - Repack without *.out
+    - Repack without config.log files
+    - Repack without config.status files
+  * Remove manpage patch applied upstream.
+  * Add patch for ftbfs with GCC-9. (Closes: #925852)
+  * Update Standards-Version to 4.4.1
+  * Update compat level to 12
+  * Simplify d/rules
+    - Add -g to generate debug symbols
+    - Install files in the old path
+  * Install the manpage
+
+ -- Sudip Mukherjee <sudipm.mukherjee@gmail.com>  Thu, 02 Jan 2020 00:49:06 +0000
+
+vfu (4.16+repack-1) unstable; urgency=medium
+
+  * QA upload.
+  * Set maintainer to Debian QA Group. (see #847513)
+  * New upstream release.
+    - Repack without the vfu/vfu-yas binary.
+    - Fixes wrong listing of filenames. (Closes: #666150)
+    - Fixes FTBFS with clang. (Closes: #756330)
+  * Apply patch from Jari Aalto:
+    - Remove deprecated dpatch and upgrade to packaging format "3.0 quilt".
+    - Update to Standards-Version to 3.9.3 and debhelper to 9.
+    (Closes: #664402)
+
+ -- Adrian Bunk <bunk@debian.org>  Sun, 27 Aug 2017 12:31:40 +0300
+
+vfu (4.10-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * debian/copyright:
+    - Add missing copyright information (Closes: #685662).
+
+ -- Luca Falavigna <dktrkranz@debian.org>  Sun, 21 Oct 2012 14:47:29 +0200
+
+vfu (4.10-1) unstable; urgency=low
+
+  * New upstream release
+  * Fixed FTBFS problem with glibc (Closes: #560456).
+  * Updated Standards-Version to 3.8.3.
+  * Added README.source for dpatch.
+
+ -- William Vera <billy@billy.com.mx>  Wed, 16 Dec 2009 18:05:13 -0600
+
+vfu (4.09-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated Standards-Version to 3.8.1.
+  * Added a watch file.
+  * Added a patch to fix format on the man page.
+
+ -- William Vera <billy@billy.com.mx>  Tue, 19 May 2009 17:34:48 -0500
+
+vfu (4.06-5) unstable; urgency=low
+
+  * Updated the upstream name (Closes: #470597).
+  * Updated debian/control Depends. (Closes: #470615).
+  * Acknowledge  NMU.
+
+ -- William Vera <billy@billy.com.mx>  Sun, 25 May 2008 12:13:13 -0500
+
+vfu (4.06-4.1) unstable; urgency=low
+
+  * Non-maintainer upload as requested by the security team.
+  * No longer use embedded code copy of pcre (Closes: #450754):
+     - Delete -I and -L items pointing to the embedded code copy from
+       the CCFLAGS_1, CCFLAGS_2, and LDFLAGS variables in the following
+       files:
+        + vfu/Makefile
+        + vfu/mm.conf
+        + vslib/makefile
+     - Make sure that the vslib/pcre directory isn't descended into, by
+       replacing the related make calls with “true” in vslib/Makefile.
+     - Add a build dependency on libpcre3-dev.
+  * Menu transition: move the menu section from “Apps/Tools” to
+    “Applications/File Management”.
+  * Bump Standards-Version to 3.7.3 (no change needed).
+  * Add a Homepage field.
+  * Remove unnedeed dpatch build dependency (there are no dpatch patches)
+    and associated instructions in rules files.
+
+ -- Cyril Brulebois <cyril.brulebois@enst-bretagne.fr>  Sat, 15 Dec 2007 17:32:36 +0100
+
+vfu (4.06-4) unstable; urgency=low
+
+  * New maintainer (Closes: #387478)
+
+ -- William Vera <billy@billy.com.mx>  Tue, 19 Jun 2007 01:35:06 -0500
+
+vfu (4.06-3) unstable; urgency=low
+
+  * QA upload.
+  * vslib/getopt2.h: Fix C/C++ linkage declarations conflict.
+    Closes: #377179.
+  * debian/control: Remove spurious `${shlibs:Misc}'.
+
+ -- Matej Vela <vela@debian.org>  Mon, 30 Oct 2006 14:31:04 +0100
+
+vfu (4.06-2) unstable; urgency=low
+
+  * QA upload.
+  * Set maintainer to QA Group; Orphaned: #387478
+  * Use at least dh 5.0.0, update debian/rules,
+    remove debian/conffiles, use dh_installman
+  * Conforms with latest Standards Version 3.7.2
+
+ -- Michael Ablassmeier <abi@debian.org>  Thu, 28 Sep 2006 09:58:55 +0200
+
+vfu (4.06-1) unstable; urgency=low
+
+  * New upstream release
+  * Sizes problem fixed (closes: #204589)
+
+ -- William Vera <billy@billy.com.mx>  Fri, 10 Jun 2005 00:12:40 -0500
+
+vfu (4.03-4) unstable; urgency=low
+
+  * New maintainer (closes: #298999)
+
+ -- William Vera <billy@billy.com.mx>  Mon, 30 May 2005 02:21:51 -0500
+
+vfu (4.03-3) unstable; urgency=low
+
+  * QA Group upload orphaning this package
+  * debian/control: build-depend on dpatch
+  * debian/rules: add dpatch support
+  * Add patch from Andreas Jochens to fix FTBFS with gcc-4.0/amd64 (closes:
+    #297942)
+
+ -- Andrew Pollock <apollock@debian.org>  Sun, 27 Mar 2005 14:26:17 +1000
+
+vfu (4.03-2) unstable; urgency=low
+
+  * Fixed breakage of archive handling
+  * Fixed unquoted-string-in-menu-item
+
+ -- Mika Fischer <mf@debian.org>  Thu,  4 Mar 2004 01:03:55 +0100
+
+vfu (4.03-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Mika Fischer <mf@debian.org>  Mon,  1 Sep 2003 12:45:04 +0200
+
+vfu (4.00-1) unstable; urgency=low
+
+  * New upstream release
+  * non-ascii chars work now (closes: Bug#160685)
+
+ -- Mika Fischer <mf@debian.org>  Mon, 14 Apr 2003 12:13:31 +0100
+
+vfu (3.04-1) unstable; urgency=low
+
+  * New upstream release (closes: Bug#113813)
+  * Fixed typo in description (closes: Bug#125456)
+  * Included patch for The Hurd (closes: Bug#105429)
+  * Fixed typo and URL in copyright file
+  * Fixed RegEx bug in rx_deb causing nonsense filenames
+
+ -- Mika Fischer <mf@debian.org>  Mon, 27 May 2002 18:19:23 +0200
+
+vfu (3.03-2.1) unstable; urgency=low
+
+  * NMU
+  * In recent implementations of C++ `not' is a reserved word.
+    Applied a patch from John R. Daily <jdaily@progeny.com> that
+    fixes several instances where `not' was used as a variable.
+    (closes: Bug#113813)
+
+ -- Doug Porter <dsp@debian.org>  Fri, 19 Oct 2001 12:40:38 -0500
+
+vfu (3.03-2) unstable; urgency=low
+
+  * Changed error in Build-Deps (fixes: Bug#100788)
+  * Removed INSTALL file
+
+ -- Mika Fischer <mf@debian.org>  Thu, 14 Jun 2001 10:15:20 +0200
+
+vfu (3.03-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Mika Fischer <mf@debian.org>  Fri,  5 Jan 2001 10:28:28 +0100
+
+vfu (3.02-1) unstable; urgency=low
+
+  * New upstream version (fixes: bug#66499)
+  * fixed docs and config file as syntax for preset dirs has changed (fixes: bug#68393)
+
+ -- Mika Fischer <mf@debian.org>  Wed, 23 Aug 2000 22:10:02 +0200
+
+vfu (3.01-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Mika Fischer <mf@debian.org>  Fri, 28 Jul 2000 15:53:36 +0200
+
+vfu (1.51-3) unstable; urgency=low
+
+  * Fixed typo in description
+    (Thanks to Vincent Renardias <vincent@ldsol.com>)
+  * Removed unneeded Makefile
+
+ -- Mika Fischer <mf@debian.org>  Mon, 27 Sep 1999 22:08:19 +0200
+
+vfu (1.51-2) unstable; urgency=low
+
+  * Added "debarc". Now one can browse ".deb"-files.
+  * Changed description: "console" => "text-based"
+    (Thanks to Chris Fearnley <cjf@netaxs.com>)
+  * Minor changes to the "debian/rules"-file.
+
+ -- Mika Fischer <mf@debian.org>  Sun, 26 Sep 1999 21:11:43 +0200
+
+vfu (1.51-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Mika Fischer <mf@debian.org>  Sun, 26 Sep 1999 21:11:20 +0200
+
+vfu (1.50-1) unstable; urgency=low
+
+  * New upstream release
+  * Manpage added
+
+ -- Mika Fischer <mf@debian.org>  Sat, 10 Apr 1999 14:55:58 +0000
+
+vfu (1.46-2) unstable; urgency=low
+
+  * Changed description to be more informative
+
+ -- Mika Fischer <mf@debian.org>  Fri,  2 Apr 1999 13:31:02 +0000
+
+vfu (1.46-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Mika Fischer <mf@debian.org>  Fri, 26 Mar 1999 12:00:00 +0100

@@ -1,0 +1,10 @@
+vfu for DEBIAN
+--------------
+
+I could not reproduce the problems with colors the author states he has when
+running under X. If you experience such problems please contact me and/or
+the upstream author so we can work out the problem.  
+
+And, of course, any comments are apreciated.
+
+ -- Mika Fischer <mf@debian.org>, Fri, 26 Mar 1999 12:00:00 +0100

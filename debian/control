@@ -1,0 +1,24 @@
+Source: vfu
+Section: utils
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Standards-Version: 4.4.1
+Build-Depends: debhelper-compat (= 12), libncurses5-dev, libpcre3-dev
+Homepage: http://cade.datamax.bg/vfu/
+
+Package: vfu
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, bzip2, unzip
+Description: Versatile text-based filemanager
+ vfu is a nice filemanager using the ncurses
+ library. It has many nice features:
+ .
+  * Fast one-key commands
+  * Filename completion and wildcard expansion
+  * Directory tree with sizes
+  * File-type colorization
+  * Archives support (TAR, TGZ, BZ2, and many more)
+  * FTP support through archive-like interface
+  * Internal text/hex file viewer and hex editor
+  * Automount feature
+  * Extensive user-defined external support/utils!

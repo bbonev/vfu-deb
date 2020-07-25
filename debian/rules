@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export CCDEF="-g"
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	install vfu/vfu debian/vfu/usr/bin
+	install rx/rx_* debian/vfu/usr/lib/vfu
+	install -m644 vfu.conf debian/vfu/etc
+
+override_dh_autoreconf:
+override_dh_auto_configure:
