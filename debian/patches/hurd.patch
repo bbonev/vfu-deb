@@ -1,0 +1,25 @@
+commit 898f04b76eddfaaf491de1a147b23d819ffc740b
+Author: Boian Bonev <bbonev@ipacct.com>
+Date:   Wed Jul 22 19:56:04 2020 +0300
+
+    fix build on GNU/Hurd (maybe this will break *BSD builds?)
+
+diff --git a/vfu/vfu.h b/vfu/vfu.h
+index 6776487..457bdbf 100644
+--- a/vfu/vfu.h
++++ b/vfu/vfu.h
+@@ -38,8 +38,12 @@
+   #  include "config.h"
+   #endif
+ 
+-  #if defined(_TARGET_NETBSD_) || (defined(BSD) && BSD >= 199306)
+-    //FIXME: is the one above correct? should _TARGET_BSD_ be used?
++  #if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__)
++    #if defined(__OpenBSD__)
++      #include <sys/types.h>
++    #else
++      #include <sys/param.h>
++    #endif
+     #include <sys/mount.h>
+   #else
+     #include <sys/vfs.h>
