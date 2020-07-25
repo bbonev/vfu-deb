@@ -1,49 +1,84 @@
-This package was debianized by William Vera <billy@billy.com.mx> on
-Mon, 30 May 2005 02:29:03 -0500.
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: vfu
+Upstream-Contact: Vladi Belperchinov-Shabanski <cade@biscom.net>
+Source: http://cade.datamax.bg/vfu/
+Comment:
+ This package was debianized by William Vera <billy@billy.com.mx> on
+ Mon, 30 May 2005 02:29:03 -0500.
+ .
+ It was downloaded from http://cade.datamax.bg/vfu/
+ .
+ Upstream Author: Vladi Belperchinov-Shabanski <cade@biscom.net>
 
-It was downloaded from http://cade.datamax.bg/vfu/
+Files: *
+Copyright: 1997-2020 © Vladi Belperchinov-Shabanski
+License: GPL-2.0
 
-Upstream Author:
-Vladi Belperchinov-Shabanski <cade@biscom.net>
+Files: vslib/pcre/*
+Copyright: Copyright (c) 1997-2011 University of Cambridge
+ All rights reserved.
+License: BSD-3-clause
 
-Copyright:
-1997-2006 © Vladi Belperchinov-Shabanski
-vfu is licensed under the GPL which can be found at /usr/share/common-licenses/GPL-2
+Files: vslib/getopt2.*
+Copyright: copyright Arno Schaefer
+License: GPL-2.0+
+Comment:
+ These files are taken from FIPS project, see
+ http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/util/disk/
 
-Files under vslib/pcre/* are copyright University of Cambridge and licensed under PCRE:
-Permission is granted to anyone to use this software for any purpose on any
-computer system, and to redistribute it freely, subject to the following
-restrictions:
+License: GPL-2.0
+ 1997-2020 © Vladi Belperchinov-Shabanski
+ vfu is licensed under the GPL which can be found at /usr/share/common-licenses/GPL-2
 
-1. This software is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+License: BSD-3-clause
+ Files under vslib/pcre/* are copyright University of Cambridge and licensed under PCRE:
+ Permission is granted to anyone to use this software for any purpose on any
+ computer system, and to redistribute it freely, subject to the following
+ restrictions:
+ .
+ 1. This software is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ .
+ 2. The origin of this software must not be misrepresented, either by
+    explicit claim or by omission. In practice, this means that if you use
+    PCRE in software which you distribute to others, commercially or
+    otherwise, you must put a sentence like this
+ .
+      Regular expression support is provided by the PCRE library package,
+      which is open source software, written by Philip Hazel, and copyright
+      by the University of Cambridge, England.
+ .
+    somewhere reasonably visible in your documentation and in any relevant
+    files or online help data or similar. A reference to the ftp site for
+    the source, that is, to
+ .
+      ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
+ .
+    should also be given in the documentation.
+ .
+ 3. Altered versions must be plainly marked as such, and must not be
+    misrepresented as being the original software.
+ .
+ 4. If PCRE is embedded in any software that is released under the GNU
+    General Purpose Licence (GPL), or Lesser General Purpose Licence (LGPL),
+    then the terms of that licence shall supersede any condition above with
+    which it is incompatible.
+ .
 
-2. The origin of this software must not be misrepresented, either by
-   explicit claim or by omission. In practice, this means that if you use
-   PCRE in software which you distribute to others, commercially or
-   otherwise, you must put a sentence like this
-
-     Regular expression support is provided by the PCRE library package,
-     which is open source software, written by Philip Hazel, and copyright
-     by the University of Cambridge, England.
-
-   somewhere reasonably visible in your documentation and in any relevant
-   files or online help data or similar. A reference to the ftp site for
-   the source, that is, to
-
-     ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/
-
-   should also be given in the documentation.
-
-3. Altered versions must be plainly marked as such, and must not be
-   misrepresented as being the original software.
-
-4. If PCRE is embedded in any software that is released under the GNU
-   General Purpose Licence (GPL), or Lesser General Purpose Licence (LGPL),
-   then the terms of that licence shall supersede any condition above with
-   which it is incompatible.
-
-vslib/getopt2.* are copyright Arno Schaefer and licensed under GPLv2+
-These files are taken from FIPS project, see
-http://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/util/disk/
+License: GPL-2.0+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <https://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
