@@ -11,8 +11,14 @@ vfu (4.18-2) unstable; urgency=medium
   * Add checking upstream tarball GPG signature
   * Add lintian override for repackaged source signature check
     - 4.18 upstream tarball contains executable and object files
-      that are excluded in the repackaged archive. The orig
-      tarball is not regenerated; the previous upload is used instead
+      that are excluded in the repackaged archive. The original
+      tarball is not regenerated; the one from the previous upload
+      is used instead
+  * Fix FTCBFS: (Closes: #950980)
+    - rework the patch from Helmut Grohne <helmut@subdivi.de>
+      in a way that uses defines in debian/rules instead of patching source
+  * Fix buffer overruns in many places
+    - discovered after enabling fortified build
 
  -- Boian Bonev <bbonev@ipacct.com>  Sat, 25 Jul 2020 00:05:15 +0300
 
