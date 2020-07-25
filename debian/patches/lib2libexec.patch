@@ -39,7 +39,16 @@ Last-Update: 2020-07-24
  echo "done."
 --- vfu-4.18.orig/vfu/vfuarc.cpp
 +++ vfu-4.18/vfu/vfuarc.cpp
-@@ -127,7 +127,7 @@ void vfu_browse_archive_file()
+@@ -27,7 +27,7 @@
+     archive_path = ""; /* cannot have path when recursing archive */
+ 
+   VString s;
+-  s = "rx_auto ";
++  s = "/usr/libexec/vfu/rx_auto ";
+   s += ( a_recursive ) ? "v" : "l";
+   s += " '" + archive_name + "' ";
+   s += " '" + archive_path + "' ";
+@@ -127,7 +127,7 @@
    VString fn = files_list_get(FLI)->full_name();
  
    VString s;
@@ -48,7 +57,7 @@ Last-Update: 2020-07-24
    s += work_path;
    s += archive_name;
    s += "\" ";
-@@ -160,7 +160,7 @@ void vfu_user_external_archive_exec( VSt
+@@ -160,7 +160,7 @@
    VString fn = files_list_get(FLI)->full_name();
  
    VString s;
@@ -57,7 +66,7 @@ Last-Update: 2020-07-24
    s += work_path;
    s += archive_name;
    s += "\" ";
-@@ -222,7 +222,7 @@ void vfu_extract_files( int one )
+@@ -222,7 +222,7 @@
    chmod( tmpfile, S_IRUSR|S_IWUSR );
  
    VString s;
