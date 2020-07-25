@@ -8,7 +8,7 @@ Author: Boian Bonev <bbonev@ipacct.com>
 Forwarded: not-needed
 Last-Update: 2020-07-25
 
---- vfu-4.18.orig/rx/rx_auto
+--- vfu-4.18/rx/rx_auto
 +++ vfu-4.18/rx/rx_auto
 @@ -28,7 +28,7 @@ for( glob "/tmp/*.rx.cache" )
  
@@ -19,3 +19,14 @@ Last-Update: 2020-07-25
  
  sub choose
  {
+--- vfu-4.18/rx/rx_deb
++++ vfu-4.18/rx/rx_deb
+@@ -34,7 +34,7 @@
+      }
+ 
+   chdir( "/tmp" );
+-  system( "rx_tar", $cmd, $cache, @ARGV );
++  system( "/usr/libexec/vfu/rx_tar", $cmd, $cache, @ARGV );
+   }
+ else
+   {
