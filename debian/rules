@@ -33,4 +33,3 @@ override_dh_auto_install:
 	install vfu/vfu debian/vfu/usr/bin
 	install rx/rx_* debian/vfu/usr/libexec/vfu
 	install -m644 vfu.conf debian/vfu/etc
-
