@@ -1,13 +1,15 @@
 #!/usr/bin/make -f
 
-export CCDEF="-g"
+export DEB_BUILD_MAINT_OPTIONS+=hardening=+bindnow
+export CCDEF=$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
+export LDDEF=$(shell dpkg-buildflags --get LDFLAGS)
 
 %:
 	dh $@
 
 override_dh_auto_install:
 	install vfu/vfu debian/vfu/usr/bin
-	install rx/rx_* debian/vfu/usr/lib/vfu
+	install rx/rx_* debian/vfu/usr/libexec/vfu
 	install -m644 vfu.conf debian/vfu/etc
 
 override_dh_autoreconf:
