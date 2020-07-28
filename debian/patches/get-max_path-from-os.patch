@@ -1,6 +1,7 @@
 Description: get MAX_PATH from OS defined PATH_MAX
  original source defines MAX_PATH to 512
  fortified source build aborts because of that
+Forwarded: yes
 
 --- vfu-4.18.orig/vslib/vsuti.h
 +++ vfu-4.18/vslib/vsuti.h

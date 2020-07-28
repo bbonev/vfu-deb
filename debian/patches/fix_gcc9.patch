@@ -1,6 +1,5 @@
 Description: Fix ftbfs with gcc9
-
----
+Forwarded: yes
 
 --- vfu-4.18.orig/vslib/vstring.h
 +++ vfu-4.18/vslib/vstring.h

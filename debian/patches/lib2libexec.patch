@@ -2,8 +2,6 @@ Description: Install private executables in /usr/libexec/vfu
  This fixes lintian executable-in-usr-lib
  .
  vfu (4.18-2) unstable; urgency=medium
-
----
 Forwarded: not-needed
 Last-Update: 2020-07-24
 

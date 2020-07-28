@@ -1,8 +1,7 @@
-commit 898f04b76eddfaaf491de1a147b23d819ffc740b
 Author: Boian Bonev <bbonev@ipacct.com>
 Date:   Wed Jul 22 19:56:04 2020 +0300
-
-    fix build on GNU/Hurd (maybe this will break *BSD builds?)
+Comment: fix build on GNU/Hurd (maybe this will break *BSD builds?)
+Forwarded: yes
 
 diff --git a/vfu/vfu.h b/vfu/vfu.h
 index 6776487..457bdbf 100644

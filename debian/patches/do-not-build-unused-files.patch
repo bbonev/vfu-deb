@@ -1,9 +1,6 @@
 Description: Do not build unused files
  Skip building binaries that will not be installed.
  The sole purpose of this is to decrease build time.
-
----
-
 Forwarded: not-needed
 Last-Update: 2020-07-25
 

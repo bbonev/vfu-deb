@@ -3,9 +3,7 @@ Description: Let rx_auto use /usr/libexec/vfu path
  which is not the case under Debian.
  .
 Author: Boian Bonev <bbonev@ipacct.com>
-
----
-Forwarded: not-needed
+Forwarded: yes
 Last-Update: 2020-07-28
 
 --- vfu-4.18.orig/rx/rx_auto
