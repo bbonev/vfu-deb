@@ -1,0 +1,27 @@
+Description: fix typos in man page
+Author: Boian Bonev <bbonev@ipacct.com>
+
+---
+Forwarded: not-needed
+Last-Update: 2020-07-28
+
+--- vfu-4.18.orig/vfu.1
++++ vfu-4.18/vfu.1
+@@ -151,7 +151,7 @@ vfu [options]
+ .PP
+ .Vb 11
+ \& - Fast one-key commands
+-\& - Extended completition and wildcard expansion
++\& - Extended completion and wildcard expansion
+ \& - Directory tree with sizes (incl. sizes cache)
+ \& - File-type colorization (extension and type)
+ \& - Archives support (TAR, TGZ, BZ2, and many more)
+@@ -276,7 +276,7 @@ All packages are \s-1TAR+GZIP\s0 .tgz, b
+ .PP
+ \&\fB\s-1NOTE\s0\fR:
+ Always check \s-1HISTORY\s0 document \*(-- it often
+-contains some usefull notes!
++contains some useful notes!
+ .SH "FILES"
+ .IX Header "FILES"
+ .Vb 1

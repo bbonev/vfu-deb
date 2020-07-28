@@ -4,3 +4,4 @@ hurd.patch
 do-not-build-unused-files.patch
 get-max_path-from-os.patch
 set-path-in-rx_auto.patch
+fix-typos-in-manpage.patch
