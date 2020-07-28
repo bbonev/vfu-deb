@@ -6,9 +6,9 @@ Author: Boian Bonev <bbonev@ipacct.com>
 
 ---
 Forwarded: not-needed
-Last-Update: 2020-07-25
+Last-Update: 2020-07-28
 
---- vfu-4.18/rx/rx_auto
+--- vfu-4.18.orig/rx/rx_auto
 +++ vfu-4.18/rx/rx_auto
 @@ -28,7 +28,7 @@ for( glob "/tmp/*.rx.cache" )
  
@@ -19,14 +19,69 @@ Last-Update: 2020-07-25
  
  sub choose
  {
---- vfu-4.18/rx/rx_deb
+--- vfu-4.18.orig/rx/rx_deb
 +++ vfu-4.18/rx/rx_deb
-@@ -34,7 +34,7 @@
-      }
+@@ -17,24 +17,28 @@ use strict;
  
+ my $cmd = lc shift @ARGV;
+ my $archive = shift @ARGV;
+-my $cache = "$archive.data.tar.gz.rx.cache";
++my $ac=`ar t "$archive"`;
++my $at='gz';
++if( index( $ac, 'data.tar.xz' ) != -1 )
++  {
++  $at='xz';
++  }
++my $cache = "$archive.data.tar.$at.rx.cache";
+ $cache =~ s/^(.+)\/([^\/]+)$/$2/;
+ 
+-if ( $cmd eq "l" || $cmd eq "v" || $cmd eq "x" )
++if( $cmd eq "l" || $cmd eq "v" || $cmd eq "x" )
+    {
+    if( ! -e "/tmp/$cache" )
+      {
+      # cache not found--fill it
+-     system( qq[ ar p "$archive" data.tar.gz > "/tmp/$cache\" ] );
+-     chmod oct(600), "/tmp/$cache"; # a bit late but still... :)
++     system( qq[ umask 0077 ; ar p "$archive" data.tar.$at > "/tmp/$cache\" ] );
+      }
+    else
+      {
+      utime time(), time(), "/tmp/$cache"; # update last modification time of the cache
+      }
+-
    chdir( "/tmp" );
 -  system( "rx_tar", $cmd, $cache, @ARGV );
 +  system( "/usr/libexec/vfu/rx_tar", $cmd, $cache, @ARGV );
    }
  else
    {
+--- vfu-4.18.orig/rx/rx_tar
++++ vfu-4.18/rx/rx_tar
+@@ -20,6 +20,8 @@ my $archive = shift @ARGV;
+ my $cache = "/tmp/$archive.rx.cache";
+ $cache =~ s/^(\/tmp\/)(.+)\/([^\/]+)$/$1$3/;
+ 
++umask oct(077);
++
+ if ( $cmd eq "l" || $cmd eq "v" )
+    {
+    my $dir = shift @ARGV;
+@@ -27,12 +29,11 @@ if ( $cmd eq "l" || $cmd eq "v" )
+    if( ! -e $cache )
+      {
+      # cache not found--fill it
+-     system( "tar tvf   \"$archive\"             > \"$cache\"" ) if $archive =~ /\.tar$/i;
+-     system( "gzip  -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /\.tar\.g?z(\.rx\.cache)?$/i;
+-     system( "gzip  -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /\.tgz$/i;
+-     system( "xz    -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /\.txz$/i;
+-     system( "bzip2 -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /\.tar\.bz2?$/i;
+-     chmod oct(600), $cache; # a bit late but still... :)
++     system( "umask 0077; tar tvf   \"$archive\"             > \"$cache\"" ) if $archive =~ /\.tar$/i;
++     system( "umask 0077; gzip  -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /\.tar\.g?z(\.rx\.cache)?$/i;
++     system( "umask 0077; gzip  -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /\.tgz$/i;
++     system( "umask 0077; xz    -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /(\.txz|\.tar\.xz(\.rx\.cache)?)$/i;
++     system( "umask 0077; bzip2 -dc \"$archive\" | tar tvf - > \"$cache\"" ) if $archive =~ /\.tar\.bz2?$/i;
+      }
+    else
+      {
