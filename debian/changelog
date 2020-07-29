@@ -23,6 +23,7 @@ vfu (4.18-2) unstable; urgency=medium
   * Fix typos in man page
   * Fix possible permission race conditions in rx_*
   * Fix buffer overflow by sprintf into small buffer
+  * Remove __DATE__ to enable reproducible build
 
  -- Boian Bonev <bbonev@ipacct.com>  Sat, 25 Jul 2020 00:05:15 +0300
 

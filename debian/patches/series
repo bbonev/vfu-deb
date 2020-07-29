@@ -6,3 +6,4 @@ get-max_path-from-os.patch
 set-path-in-rx_auto.patch
 fix-typos-in-manpage.patch
 fix-format-buffer-overflow.patch
+remove-date-reproducible-build.patch

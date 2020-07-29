@@ -1,0 +1,27 @@
+Description: Remove __DATE__ for reproducible build
+ Compile date included as string prevents reproducible build
+Author: Boian Bonev <bbonev@ipacct.com>
+Forwarded: yes
+Last-Update: 2020-07-29
+
+--- vfu-4.18.orig/vfu/vfu.cpp
++++ vfu-4.18/vfu/vfu.cpp
+@@ -1012,7 +1012,6 @@ void vfu_help_cli()
+     "  3. example: vfu -d c:/ -r -d d:/ -r -d e:/ -r\n"
+     "compile information:\n"
+     "  target description: " _TARGET_DESCRIPTION_ "\n"
+-    "  compile date: " __DATE__ "\n"
+     );
+ }
+ 
+--- vfu-4.18.orig/vfu/vfusetup.h
++++ vfu-4.18/vfu/vfusetup.h
+@@ -20,7 +20,7 @@
+ 
+ #define VFU_VERSION "4.18"
+ 
+-#define HEADER "VF/U v" VFU_VERSION " (" __DATE__ ") by (c) Vladi Belperchinov-Shabanski `Cade' 1996-2018"
++#define HEADER "VF/U v" VFU_VERSION " by (c) Vladi Belperchinov-Shabanski `Cade' 1996-2018"
+ #define CONTACT "<cade@biscom.net> <cade@datamax.bg> [http://cade.datamax.bg]"
+ 
+ #ifdef _TARGET_GO32_
