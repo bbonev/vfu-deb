@@ -1,0 +1,17 @@
+Description: Fix format buffer overflow
+ Increase a buffer to avoid stack overflow by sprintf
+Author: Boian Bonev <bbonev@ipacct.com>
+Forwarded: yes
+Last-Update: 2020-07-29
+
+--- vfu-4.18.orig/vfu/vfucopy.cpp
++++ vfu-4.18/vfu/vfucopy.cpp
+@@ -136,7 +136,7 @@ void show_copy_pos( fsize_t a_fc, /* fil
+                     long    a_et, /* elapsed time for current file copy */
+                     CopyInfo *copy_info ) /* totals info */
+ {
+-  char t[16];
++  char t[128];
+ 
+   fsize_t c1 = a_fc;
+   fsize_t a1 = a_fa;
