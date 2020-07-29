@@ -1,5 +1,3 @@
 # the upstream source contains object and executables files
 # that is why a repackaged source is used, until next version
 vfu: orig-tarball-missing-upstream-signature
-# vfu.html is an old version of the man page
-vfu: possible-documentation-but-no-doc-base-registration
