@@ -1,7 +1,12 @@
-Description: Let rx_auto use /usr/libexec/vfu path
+Description: Let rx_* use /usr/libexec/vfu path; add xz
  Original rx_auto assumes that rx_helpers are available on the PATH
  which is not the case under Debian.
  .
+ Another fix is applied to avoid unpacking files in /tmp and limiting
+ access to them afterwards; now that is done by umask in a single step
+ .
+ This patch also adds support for .tar.xz files and .deb files with
+ xz compressed data inside
 Author: Boian Bonev <bbonev@ipacct.com>
 Forwarded: yes
 Last-Update: 2020-07-28
@@ -17,6 +22,15 @@ Last-Update: 2020-07-28
  
  sub choose
  {
+@@ -33,7 +33,7 @@
+ sub choose
+ {
+   local $_ = shift;
+-  return "rx_tar" if /\.(?:tar(?:\.(?:z|gz|bz2))?|t[bgx]z)$/i;
++  return "rx_tar" if /\.(?:tar(?:\.(?:z|gz|xz|bz2))?|t[bgx]z)$/i;
+   return "rx_zip" if /\.(?:zip|jar|pk3|egg|maff)$/i;
+   return "rx_deb" if /\.deb$/i;
+   return "rx_ftp" if /\.ftp$/i;
 --- vfu-4.18.orig/rx/rx_deb
 +++ vfu-4.18/rx/rx_deb
 @@ -17,24 +17,28 @@ use strict;
@@ -83,3 +97,14 @@ Last-Update: 2020-07-28
       }
     else
       {
+--- vfu-4.18.orig/vfu.conf
++++ vfu-4.18/vfu.conf
+@@ -48,6 +48,8 @@
+ Archive=*.deb
+ Archive=*.ftp
+ Archive=*.rpm
++Archive=*.tar.xz
++Archive=*.txz
+ 
+ #
+ # if you'd like to restrict VFU when walking the directory tree -- list paths
