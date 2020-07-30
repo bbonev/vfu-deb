@@ -4,8 +4,8 @@ Description: Do not build unused files
 Forwarded: not-needed
 Last-Update: 2020-07-25
 
---- vfu-4.18.orig/makefile
-+++ vfu-4.18/makefile
+--- vfu-4.20.orig/makefile
++++ vfu-4.20/makefile
 @@ -28,7 +28,7 @@ AR = ar rv
  CC = gcc
  LD = gcc
@@ -37,8 +37,8 @@ Last-Update: 2020-07-25
  	$(MAKE) -C vstring link
  	$(MAKE) -C vslib link
  	$(MAKE) -C vfu link
---- vfu-4.18.orig/vfu/makefile
-+++ vfu-4.18/vfu/makefile
+--- vfu-4.20.orig/vfu/makefile
++++ vfu-4.20/vfu/makefile
 @@ -13,13 +13,13 @@ re: mm_update rebuild
  
  li: mm_update link
@@ -53,6 +53,26 @@ Last-Update: 2020-07-25
  
 -link: mm_update link-vfu link-vfu.yas link-vfu-debug link-vfu.yas-debug 
 +link: mm_update link-vfu
+ 
+ ### GLOBAL (AND USER) DEFS #####################################################
+ 
+--- vfu-4.20.orig/vstring/makefile
++++ vfu-4.20/vstring/makefile
+@@ -13,13 +13,13 @@ re: mm_update rebuild
+ 
+ li: mm_update link
+ 
+-all: mm_update modules vstring.a test 
++all: mm_update vstring.a test 
+ 
+-clean: mm_update clean-modules clean-vstring.a clean-test 
++clean: mm_update clean-vstring.a clean-test 
+ 
+-rebuild: mm_update rebuild-modules rebuild-vstring.a rebuild-test 
++rebuild: mm_update rebuild-vstring.a rebuild-test 
+ 
+-link: mm_update link-modules link-vstring.a link-test 
++link: mm_update link-vstring.a link-test 
  
  ### GLOBAL (AND USER) DEFS #####################################################
  
