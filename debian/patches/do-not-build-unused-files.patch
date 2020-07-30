@@ -10,8 +10,8 @@ Last-Update: 2020-07-25
  CC = gcc
  LD = gcc
  MKDIR = mkdir -p
--MODULES = yascreen vslib vfu
-+MODULES = vslib vfu
+-MODULES = yascreen vstring vslib vfu
++MODULES = vstring vslib vfu
  RANLIB = ranlib
  RMDIR = rm -rf
  RMFILE = rm -f
@@ -20,22 +20,23 @@ Last-Update: 2020-07-25
  
  modules:
 -	$(MAKE) -C yascreen 
+ 	$(MAKE) -C vstring 
  	$(MAKE) -C vslib 
  	$(MAKE) -C vfu 
- 
-@@ -48,12 +47,10 @@ clean-modules:
+@@ -50,13 +49,11 @@ clean-modules:
  	$(MAKE) -C vfu clean
  
  rebuild-modules:
 -	$(MAKE) -C yascreen rebuild
+ 	$(MAKE) -C vstring rebuild
  	$(MAKE) -C vslib rebuild
  	$(MAKE) -C vfu rebuild
  
  link-modules:
 -	$(MAKE) -C yascreen link
+ 	$(MAKE) -C vstring link
  	$(MAKE) -C vslib link
  	$(MAKE) -C vfu link
- 
 --- vfu-4.18.orig/vfu/makefile
 +++ vfu-4.18/vfu/makefile
 @@ -13,13 +13,13 @@ re: mm_update rebuild
