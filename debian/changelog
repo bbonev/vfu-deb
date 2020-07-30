@@ -1,7 +1,6 @@
-vfu (4.18-3) UNRELEASED; urgency=medium
+vfu (4.20-1) unstable; urgency=medium
 
-  * Fix buffer overflow by sprintf into small buffer
-  * Remove __DATE__ to enable reproducible build
+  * Update to new upstream release of 4.20.
   * Add Vcs-* tags
 
  -- Boian Bonev <bbonev@ipacct.com>  Wed, 29 Jul 2020 01:46:19 +0000
