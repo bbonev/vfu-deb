@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 export DEB_BUILD_MAINT_OPTIONS+=hardening=+bindnow
+-include /usr/share/dpkg/buildtools.mk
 export CCDEF=$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
 export LDDEF=$(shell dpkg-buildflags --get LDFLAGS)
 RANLIB?=gcc-ranlib

@@ -1,3 +1,10 @@
+vfu (4.20-1.1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix FTCBFS: Let dpkg's buildtools.mk supply cross tools. (Closes: #966684)
+
+ -- Helmut Grohne <helmut@subdivi.de>  Sat, 01 Aug 2020 17:15:37 +0200
+
 vfu (4.20-1) unstable; urgency=medium
 
   * Update to new upstream release of 4.20.
