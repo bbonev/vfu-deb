@@ -5,6 +5,8 @@ vfu (4.21-1) UNRELEASED; urgency=medium
 
   [ Boian Bonev ]
   * Update to new upstream release of 4.21
+  * Remove all patches merged upstream
+  * Simplify debian/rules as most of the things are included upstream
 
  -- Boian Bonev <bbonev@ipacct.com>  Sat, 01 Aug 2020 17:15:37 +0200
 
