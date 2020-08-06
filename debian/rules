@@ -1,34 +1,13 @@
 #!/usr/bin/make -f
 
 export DEB_BUILD_MAINT_OPTIONS+=hardening=+bindnow
--include /usr/share/dpkg/buildtools.mk
-export CCDEF=$(shell dpkg-buildflags --get CFLAGS) $(shell dpkg-buildflags --get CPPFLAGS)
-export LDDEF=$(shell dpkg-buildflags --get LDFLAGS)
-RANLIB?=gcc-ranlib
-AR?=gcc-ar
 
 %:
 	dh $@ --buildsystem=makefile --without=autoreconf
 
 override_dh_auto_build:
 	dh_auto_build -- \
-		STRIP=: \
-		CC_1="$(CXX)" \
-		CC_2="$(CXX)" \
-		CC_3="$(CXX)" \
-		CC_4="$(CXX)" \
-		LD_1="$(CXX)" \
-		LD_2="$(CXX)" \
-		LD_3="$(CXX)" \
-		LD_4="$(CXX)" \
-		AR_1="$(AR) rv" \
-		AR_2="$(AR) rv" \
-		AR_3="$(AR) rv" \
-		AR_4="$(AR) rv" \
-		RANLIB_1=$(RANLIB) \
-		RANLIB_2=$(RANLIB) \
-		RANLIB_3=$(RANLIB) \
-		RANLIB_4=$(RANLIB) \
+		STRIP=:
 
 override_dh_auto_install:
 	install vfu/vfu debian/vfu/usr/bin
