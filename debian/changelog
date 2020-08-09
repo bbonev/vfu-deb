@@ -1,4 +1,4 @@
-vfu (4.21-1) UNRELEASED; urgency=medium
+vfu (4.21-1) unstable; urgency=medium
 
   [ Helmut Grohne ]
   * Fix FTCBFS: Let dpkg's buildtools.mk supply cross tools. (Closes: #966684)
