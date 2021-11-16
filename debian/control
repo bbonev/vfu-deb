@@ -2,16 +2,23 @@ Source: vfu
 Section: utils
 Priority: optional
 Maintainer: Boian Bonev <bbonev@ipacct.com>
-Standards-Version: 4.5.0
-Build-Depends: debhelper-compat (= 13), libncurses5-dev, libpcre3-dev
+Standards-Version: 4.6.0
+Build-Depends:
+ debhelper-compat (= 13),
+ libncurses-dev,
+ libpcre3-dev,
 Rules-Requires-Root: no
-Homepage: http://cade.datamax.bg/vfu/
+Homepage: https://cade.noxrun.com/projects/vfu/
 Vcs-Browser: https://github.com/bbonev/vfu-deb
 Vcs-Git: https://github.com/bbonev/vfu-deb.git
 
 Package: vfu
 Architecture: any
-Depends: bzip2, unzip, ${misc:Depends}, ${shlibs:Depends}
+Depends:
+ bzip2,
+ unzip,
+ ${misc:Depends},
+ ${shlibs:Depends},
 Description: Versatile text-based file-manager
  vfu is a nice file-manager using the ncurses
  library. It has many nice features:
