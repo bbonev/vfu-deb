@@ -1,3 +1,14 @@
+vfu (4.21-2) unstable; urgency=medium
+
+  * Change dep on libncurses5-dev to libcurses-dev
+  * Update standards to 4.6.0, no changes
+  * wrap-and-sort --short-indent --wrap-always --sort-binary-packages
+     --trailing-comma
+  * Update homepage and d/watch
+  * Add d/upstream/metadata
+
+ -- Boian Bonev <bbonev@ipacct.com>  Tue, 16 Nov 2021 23:04:12 +0000
+
 vfu (4.21-1) unstable; urgency=medium
 
   [ Helmut Grohne ]
