@@ -6,7 +6,7 @@ Standards-Version: 4.6.0
 Build-Depends:
  debhelper-compat (= 13),
  libncurses-dev,
- libpcre3-dev,
+ libpcre2-dev,
 Rules-Requires-Root: no
 Homepage: https://cade.noxrun.com/projects/vfu/
 Vcs-Browser: https://github.com/bbonev/vfu-deb
