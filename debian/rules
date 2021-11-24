@@ -3,7 +3,7 @@
 export DEB_BUILD_MAINT_OPTIONS+=hardening=+bindnow
 
 %:
-	dh $@ --buildsystem=makefile --without=autoreconf
+	dh $@ --buildsystem=makefile --without=autoreconf --no-parallel
 
 override_dh_auto_build:
 	dh_auto_build -- \
