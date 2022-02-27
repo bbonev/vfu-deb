@@ -1,3 +1,9 @@
+vfu (4.23-1) unstable; urgency=medium
+
+  * New upstream release 4.23
+
+ -- Boian Bonev <bbonev@ipacct.com>  Sun, 27 Feb 2022 04:17:10 +0000
+
 vfu (4.22-1) unstable; urgency=medium
 
   * Update to 4.22
