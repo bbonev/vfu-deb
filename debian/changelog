@@ -1,3 +1,9 @@
+vfu (4.23-1~bpo11+1) bullseye-backports; urgency=medium
+
+  * Rebuild for bullseye-backports.
+
+ -- Boian Bonev <bbonev@ipacct.com>  Mon, 28 Feb 2022 01:08:36 +0000
+
 vfu (4.23-1) unstable; urgency=medium
 
   * New upstream release 4.23
