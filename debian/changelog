@@ -1,3 +1,13 @@
+vfu (5.01-1) unstable; urgency=medium
+
+  * New upstream release 5.01
+    - vfu 5.x is now unicode (Closes: #1024330, #1029107)
+    - fix files with special chars (Closes: #1024281)
+    - fix files with spaces in archives (Closes: #1024884)
+  * Bump up standards to 4.6.2, no changes
+
+ -- Boian Bonev <bbonev@ipacct.com>  Thu, 02 Feb 2023 21:57:27 +0000
+
 vfu (4.23-1) unstable; urgency=medium
 
   * New upstream release 4.23
