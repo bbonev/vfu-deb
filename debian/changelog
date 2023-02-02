@@ -4,7 +4,10 @@ vfu (5.01-1) unstable; urgency=medium
     - vfu 5.x is now unicode (Closes: #1024330, #1029107)
     - fix files with special chars (Closes: #1024281)
     - fix files with spaces in archives (Closes: #1024884)
-  * Bump up standards to 4.6.2, no changes
+  * Update standards to 4.6.2, no changes
+  * Change screen library to yascreen
+  * Re-enable parallel build
+  * Add missing dep on pkg-config
 
  -- Boian Bonev <bbonev@ipacct.com>  Thu, 02 Feb 2023 21:57:27 +0000
 
