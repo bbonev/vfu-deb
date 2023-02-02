@@ -5,7 +5,6 @@ Maintainer: Boian Bonev <bbonev@ipacct.com>
 Standards-Version: 4.6.2
 Build-Depends:
  debhelper-compat (= 13),
- libncurses-dev,
  libpcre2-dev,
  libyascreen-dev (>= 1.95),
  pkg-config,
