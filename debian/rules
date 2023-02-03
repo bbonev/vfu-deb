@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-export DEB_BUILD_MAINT_OPTIONS+=hardening=+bindnow
+export DEB_BUILD_MAINT_OPTIONS+=hardening=+all
 
 %:
 	dh $@ --buildsystem=makefile --without=autoreconf
@@ -11,6 +11,7 @@ override_dh_auto_build:
 		V=1
 
 override_dh_auto_install:
-	install vfu/vfu.yas debian/vfu/usr/bin/vfu
+	install vfu/vfu.yas debian/vfu-yascreen/usr/bin/vfu-yascreen
+	install vfu/vfu debian/vfu-ncurses/usr/bin/vfu-ncurses
 	install rx/rx_* debian/vfu/usr/libexec/vfu
 	install -m644 vfu.conf debian/vfu/etc

@@ -1,3 +1,13 @@
+vfu (5.01-2) unstable; urgency=medium
+
+  * Re-enable the build of ncurses based vfu
+    - both ncurses/yascreen binaries as alternatives
+    - vfu arch all with all the common stuff
+    - vfu-ncurses executable only
+    - vfu-yascreen executable only
+
+ -- Boian Bonev <bbonev@ipacct.com>  Fri, 03 Feb 2023 01:54:04 +0000
+
 vfu (5.01-1) unstable; urgency=medium
 
   * New upstream release 5.01

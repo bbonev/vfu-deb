@@ -1,2 +1,0 @@
-?package(vfu): needs="text" section="Applications/File Management" \
-title="vfu" command="/usr/bin/vfu"

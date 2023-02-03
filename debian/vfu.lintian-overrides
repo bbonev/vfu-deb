@@ -1,0 +1,3 @@
+# vfu depends on vfu-ncurses|vfu-yascreen
+# and the manual page is the same for both
+spare-manual-page
