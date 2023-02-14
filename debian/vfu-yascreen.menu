@@ -1,2 +1,0 @@
-?package(vfu-yascreen): needs="text" section="Applications/File Management" \
-title="vfu" command="/usr/bin/vfu-yascreen"

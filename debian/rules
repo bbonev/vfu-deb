@@ -11,7 +11,6 @@ override_dh_auto_build:
 		V=1
 
 override_dh_auto_install:
-	install -DT vfu/vfu.yas debian/vfu-yascreen/usr/bin/vfu-yascreen
-	install -DT vfu/vfu debian/vfu-ncurses/usr/bin/vfu-ncurses
+	install -DT vfu/vfu.yas debian/vfu/usr/bin/vfu
 	install -DT -m644 vfu.conf debian/vfu/etc/vfu.conf
 	install -Dt debian/vfu/usr/libexec/vfu rx/rx_*
