@@ -5,7 +5,6 @@ Maintainer: Boian Bonev <bbonev@ipacct.com>
 Standards-Version: 4.6.2
 Build-Depends:
  debhelper-compat (= 13),
- libncurses-dev,
  libpcre2-dev,
  libyascreen-dev (>= 1.95),
  pkg-config,
@@ -15,62 +14,13 @@ Vcs-Browser: https://github.com/bbonev/vfu-deb
 Vcs-Git: https://github.com/bbonev/vfu-deb.git
 
 Package: vfu
-Architecture: all
+Architecture: any
 Depends:
  bzip2,
  unzip,
- vfu-yascreen (>= ${source:Version}) | vfu-ncurses (>= ${source:Version}),
- ${misc:Depends},
- ${perl:Depends},
-Description: Versatile text-based file-manager (common files)
- vfu is a nice file-manager using the ncurses or yascreen
- libraries. It has many nice features:
- .
-  * Fast one-key commands
-  * Filename completion and wildcard expansion
-  * Directory tree with sizes
-  * File-type colorization
-  * Archives support (TAR, TGZ, BZ2, and many more)
-  * FTP support through archive-like interface
-  * Internal text/hex file viewer and hex editor
-  * Automount feature
-  * Extensive user-defined external support/utils!
-
-Package: vfu-ncurses
-Architecture: any
-Breaks:
- vfu (<= 5.01-1),
-Replaces:
- vfu (<= 5.01-1),
-Depends:
- vfu (= ${source:Version}),
  ${misc:Depends},
  ${shlibs:Depends},
-Description: Versatile text-based file-manager (ncurses)
- vfu is a nice file-manager using the ncurses
- library. It has many nice features:
- .
-  * Fast one-key commands
-  * Filename completion and wildcard expansion
-  * Directory tree with sizes
-  * File-type colorization
-  * Archives support (TAR, TGZ, BZ2, and many more)
-  * FTP support through archive-like interface
-  * Internal text/hex file viewer and hex editor
-  * Automount feature
-  * Extensive user-defined external support/utils!
-
-Package: vfu-yascreen
-Architecture: any
-Breaks:
- vfu (<= 5.01-1),
-Replaces:
- vfu (<= 5.01-1),
-Depends:
- vfu (= ${source:Version}),
- ${misc:Depends},
- ${shlibs:Depends},
-Description: Versatile text-based file-manager (yascreen)
+Description: Versatile text-based file-manager
  vfu is a nice file-manager using the yascreen
  library. It has many nice features:
  .
