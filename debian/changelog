@@ -1,13 +1,26 @@
-vfu (5.07-2) unstable; urgency=medium
+vfu (5.09-1) unstable; urgency=medium
 
-  * New upstream release 5.07
+  * New upstream release 5.09
+    - fix directory with special symbols (Closes: #1032338)
+    - fix file handling with special symbols (Closes: #1032787)
+    - fix crash on new dir (Closes: #1033198)
+    - fix scrollbar (Closes: #1035741)
+    - add new shell macros (Closes: #1032340)
+    - fix clipboard (Closes: #1036187)
   * Re-enable the build of ncurses based vfu
     - both ncurses/yascreen binaries as alternatives
     - vfu arch all with all the common stuff
     - vfu-ncurses executable only
     - vfu-yascreen executable only
 
- -- Boian Bonev <bbonev@ipacct.com>  Sun, 12 Feb 2023 22:06:29 +0000
+ -- Boian Bonev <bbonev@ipacct.com>  Wed, 21 Jun 2023 22:47:24 +0000
+
+vfu (5.07-1) unstable; urgency=medium
+
+  * New upstream release 5.07
+    - many important bugfixes from upstream
+
+ -- Boian Bonev <bbonev@ipacct.com>  Sun, 12 Feb 2023 22:06:28 +0000
 
 vfu (5.01-1) unstable; urgency=medium
 
