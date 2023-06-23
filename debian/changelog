@@ -1,3 +1,9 @@
+vfu (5.09-2) UNRELEASED; urgency=medium
+
+  * Fix version in Breaks/Replaces
+
+ -- Boian Bonev <bbonev@ipacct.com>  Fri, 23 Jun 2023 22:06:48 +0000
+
 vfu (5.09-1) unstable; urgency=medium
 
   * New upstream release 5.09
