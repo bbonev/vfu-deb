@@ -39,9 +39,9 @@ Description: Versatile text-based file-manager (common files)
 Package: vfu-ncurses
 Architecture: any
 Breaks:
- vfu (<= 5.01-1),
+ vfu (<= 5.07-1),
 Replaces:
- vfu (<= 5.01-1),
+ vfu (<= 5.07-1),
 Depends:
  vfu (= ${source:Version}),
  ${misc:Depends},
@@ -63,9 +63,9 @@ Description: Versatile text-based file-manager (ncurses)
 Package: vfu-yascreen
 Architecture: any
 Breaks:
- vfu (<= 5.01-1),
+ vfu (<= 5.07-1),
 Replaces:
- vfu (<= 5.01-1),
+ vfu (<= 5.07-1),
 Depends:
  vfu (= ${source:Version}),
  ${misc:Depends},
