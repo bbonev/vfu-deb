@@ -1,3 +1,10 @@
+vfu (5.09-3) unstable; urgency=medium
+
+  * Replace pkg-config with pkgconf
+  * Bump standards to 4.7.2, no changes
+
+ -- Boian Bonev <bbonev@ipacct.com>  Fri, 28 Feb 2025 21:38:37 +0000
+
 vfu (5.09-2) unstable; urgency=medium
 
   * Fix version in Breaks/Replaces
